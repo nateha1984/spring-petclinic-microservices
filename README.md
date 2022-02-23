@@ -460,16 +460,16 @@ Spring Boot includes a number of additional features to help you monitor and man
 
 Actuator endpoints let you monitor and interact with your application. By default, Spring Boot application exposes `health` and `info` endpoints to show arbitrary application info and health information. Apps in this project are pre-configured to expose all the Actuator endpoints.
 
-You can try them out by opening the following app actuator endpoints in a browser:
+The app actuator endpoints are below. You can see what they return by making requests with `curl`. You can trying opening the actuator endpoints in a browser but you will need the full URLs if you copy this from a terminal or cloud shell into a browser.
 
 ```bash
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/env
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/configprops
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/env
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/actuator/configprops
 
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator/env
-open https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator/configprops
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator/env
+curl https://${SPRING_CLOUD_SERVICE}-${API_GATEWAY}.azuremicroservices.io/api/customer/actuator/configprops
 ```
 
 #### Start monitoring Spring Boot apps and dependencies - in Application Insights
@@ -518,7 +518,7 @@ You can see these custom metrics in the `Metrics` blade:
 ![](./media/petclinic-microservices-custom-metrics.jpg)
 
 You can use the Availability Test feature in Application Insights and monitor 
-the availability of applications:
+the availability of applications. You will have to set this up yourself, below is an example of what this looks like.
 ![](./media/petclinic-microservices-availability.jpg)
 
 Navigate to the `Live Metrics` blade - you can see live metrics on screen with low latencies < 1 second:
