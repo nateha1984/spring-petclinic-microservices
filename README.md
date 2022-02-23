@@ -105,7 +105,6 @@ have the CLI extension, you may need to upgrade to the latest using --
 ### Create a new folder and clone the sample app repository to your Azure Cloud account  
 
 ```bash
-    mkdir source-code
     git clone https://github.com/azure-samples/spring-petclinic-microservices
 ```
 
@@ -152,7 +151,7 @@ Then, set the environment:
 ```bash
     source .scripts/setup-env-variables-azure.sh
 ```
-
+For Azure Cloud Shell, note that if your shell times out or you close the browser, you will lose all your environment variables. When you start a new shell instance, just run the `aource` command again.
 ### Login to Azure 
 Login to the Azure CLI and choose your active subscription. Be sure to choose the active subscription that is whitelisted for Azure Spring Cloud
 
